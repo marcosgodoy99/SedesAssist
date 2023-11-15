@@ -1,0 +1,35 @@
+Sistema de toma de asistencia 
+Usar:
+	php:Objetos
+		herencia
+		trait
+		encapsulamiento
+		estatico
+	html 
+		Boostrap
+		JavaScript
+	base de datos:
+		mariadb
+
+Tablas
+	alumnos: id,dni,nombre,apellido,nacimiento
+	asistencia: id,dni,fecha (timestamp)
+	profesores: id,dni,nombre,apellido
+	parametros: cant_dias (cantidad de dias de clase) array con los porcentajes (Promocion,regular)
+	
+Hacer
+	-Alta baja modificacion de alumnos (Nombre,apellido,dni,fecha nacimiento)
+	-Interfaz grafica
+	-Cargar asistencia
+	-Porcentaje de asistencias
+	-Promociona si o no, poner en rojo o verde el fondo
+	-Validacion(Si hay duplicado avisar)
+	-Listado alfabeticamente por apellido
+
+
+deploy.txt paso a paso de como instalar el sistema
+link github
+
+paso 1- clone y url
+
+
