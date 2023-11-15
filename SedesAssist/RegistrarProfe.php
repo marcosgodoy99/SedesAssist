@@ -14,14 +14,14 @@ $profesor = $STMT->fetchAll(PDO::FETCH_ASSOC);
 <html lang="en">
 <head>
     <link rel="stylesheet" href="login/style.css">
-    <script src="js/SweetAlert2.js"></script>
+    <script src="js/SweetAlert.js"></script>
     <title>registrar profesor</title>
 </head>
 <body>
  
 <div class="fondito">
     <div class="container my-3">
-        <form method="POST" action="registrarprofe.php">
+        <form method="POST" action="RegistrarProfe.php">
             <h3>REGISTRAR PROFESOR</h3>
             <div class="input-box">
             <input type="text"  name="dni" placeholder="DNI">
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["registrar"])) {
                 title: "El DNI ya existe en la base de datos",
                 text: "Por favor ingrese otro DNI",
             }).then(function() {
-                window.location = "registrarprofe.php";
+                window.location = "RegistrarProfe.php";
             });</script>';
         }
     }
@@ -65,9 +65,9 @@ if ($edad >= 17) {
         $maxLongitudApellido = 25;
 
     if (strlen($dni) <= $maxLongitudDni && strlen($nombre) <= $maxLongitudNombre && strlen($apellido) <= $maxLongitudApellido) {
-        if (preg_match('/^[0-8]+$/', $dni)) { 
-            if (preg_match('/^[A-Za-z]+$/', $nombre)) {
-                if (preg_match('/^[A-Za-z]+$/', $apellido)) {
+        if (preg_match('/^[0-9]+$/', $dni)) { 
+            if (preg_match('/^[A-Za-z ]+$/', $nombre)) {
+                if (preg_match('/^[A-Za-z ]+$/', $apellido)) {
                     $nuevoProfesor = [
                         'dni' => $dni,
                         'nombre' => $nombre,
